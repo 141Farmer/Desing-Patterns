@@ -1,0 +1,4 @@
+with open('rev_this','r') as file:
+          s=file.read()
+
+print(s)
