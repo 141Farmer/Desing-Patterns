@@ -1,0 +1,64 @@
+--Inappropriate naming
+          A variable name should say exactly what it is.
+          A method should say exactly what it does.
+
+--Comments
+          Extract Method      
+          Rename Method
+          Introduce Assertion
+
+--Long method
+          Extract Method
+          Replace Temp with Query
+          Introduce Parameter Object
+          Preserve Whole Object
+          Replace Method with Method Object.
+          Decompose Conditional
+
+
+--Duplicated Code
+          Extract Method
+          Pull Up Field
+          Form Template Method
+          Substitute Algorithm
+
+--Speculative Generality
+          Collapse Hierarchy
+          Inline Class
+          Remove Parameter
+
+--Lazy Class
+          Inline Class
+          Collapse Hierarchy
+
+--Black Sheep
+         A subclass that is substantially different in nature than other subclasses in the
+          hierarchy. 
+          A method in a class that is noticeably different from other methods in the class.
+
+--Primitive Obsession
+          Extract Class
+          Replace Data Value with Object
+          Replace Type Code with Class
+          Introduce Parameter Object
+          Replace Array with Object
+
+--Oddball Solution
+
+          Substitute Algorithm
+
+--Large Class
+          Extract Class
+          Replace Type Code with Class/Subclass
+          Replace Type Code with State/Strategy
+          Replace Conditional with Polymorphism
+
+--Switch Statement
+          Replace Type Code with Polymorphism
+          Replace Type Code with State / Strategy
+          Replace Parameter with Explicit Methods
+          Introduce Null Object.
+
+
+
+
