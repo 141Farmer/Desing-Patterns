@@ -1,14 +1,15 @@
 public class Main {
-    public static void main(String[] args) {
+          public static void main(String[] args) {
+                    Products productElectric=new ProductElectric("Laptop", "HP", "10", "10h", "1-h");
+                    Products productCloth=new ProductCloth("Shirt", "HP", "10", "10h", "1-h");
+                    
+                    ProductClient productClient;
+                    
+                    productClient=new ProductClient(productCloth);
+                    Products cloth=productClient.createProduct();
 
-        Shape circlePrototype=new Circle("red");
-
-        circlePrototype.draw();
-      
-        ShapeClient client=new ShapeClient(circlePrototype);
-
-        Shape redCircle = client.createShape();
-      
-        redCircle.draw();
-    }     
+                    productClient=new ProductClient(productElectric);
+                    Products electric=productClient.createProduct();
+          
+          }
 }
