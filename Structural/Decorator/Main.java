@@ -1,17 +1,16 @@
 public class Main {
-          public static void main(String[] args) {
+          public static void main(String[] args){
              
-                    Coffee coffee=new PlainCoffee();
+                    Coffee coffee=new BasicCoffee();
                     System.out.println("Description: " + coffee.getDescription());
-                    System.out.println("Cost: $" + coffee.getCost());
-      
-                    Coffee milkCoffee=new MilkDecorator(new PlainCoffee());
-                    System.out.println("\nDescription: " + milkCoffee.getDescription());
-                    System.out.println("Cost: $" + milkCoffee.getCost());
-      
-              
-                    Coffee sugarMilkCoffee=new SugarDecorator(new MilkDecorator(new PlainCoffee()));
-                    System.out.println("\nDescription: " + sugarMilkCoffee.getDescription());
-                    System.out.println("Cost: $" + sugarMilkCoffee.getCost());
+                    
+                    Coffee creamCoffee=new CreamDecorator(coffee);
+                    System.out.println("\nDescription: " + creamCoffee.getDescription());
+
+                    Coffee milkCreamCoffee=new MilkDecorator(creamCoffee);
+                    System.out.println("\nDescription: " + milkCreamCoffee.getDescription());
+                    
+                    Coffee sugarMilkCreamCoffee=new SugarDecorator(milkCreamCoffee);
+                    System.out.println("\nDescription: " + sugarMilkCreamCoffee.getDescription());
           }
 }
