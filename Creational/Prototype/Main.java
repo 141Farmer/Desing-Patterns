@@ -1,15 +1,18 @@
 public class Main {
           public static void main(String[] args) {
-                    Products productElectric=new ProductElectric("Laptop", "HP", "10", "10h", "1-h");
-                    Products productCloth=new ProductCloth("Shirt", "HP", "10", "10h", "1-h");
-                    
-                    ProductClient productClient;
-                    
-                    productClient=new ProductClient(productCloth);
-                    Products cloth=productClient.createProduct();
+              Registry registry = new Registry();
+      
+              registry.addPrototype("BasicTShirt", new ProductCloth("T-Shirt", "Clothing", "20.00", "White", "M"));
+              registry.addPrototype("Smartphone", new ProductElectric("Smartphone", "Electronics", "699.00", "128GB", "24 hours"));
 
-                    productClient=new ProductClient(productElectric);
-                    Products electric=productClient.createProduct();
-          
+              ProductCloth clonedTShirt = (ProductCloth) registry.getPrototype("BasicTShirt");
+              ProductElectric clonedSmartphone = (ProductElectric) registry.getPrototype("Smartphone");
+
+              clonedTShirt = new ProductCloth("T-Shirt", "Clothing", "25.00", "Black", "L");
+              clonedSmartphone = new ProductElectric("Smartphone", "Electronics", "799.00", "256GB", "30 hours");
+
+              System.out.println(clonedTShirt);
+              System.out.println(clonedSmartphone);
           }
-}
+      }
+      
